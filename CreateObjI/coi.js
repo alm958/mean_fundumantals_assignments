@@ -31,6 +31,9 @@ bike.makeNoise('ahooga-ahooga');
 var bus = VehicleConstructor('bus', 4,12);
 
 bus.pickUpNDropOve = function(passengerDelta){
+    if (- passengerDelta > bus.passenger_count){
+        passengerDelta = - bus.passenger_count;
+    }
     bus.passenger_count += passengerDelta;
     var direction = 'on';
     if (passengerDelta < 0){
@@ -41,4 +44,4 @@ bus.pickUpNDropOve = function(passengerDelta){
     return bus;
 }
 
-bus.pickUpNDropOve(5).makeNoise().pickUpNDropOve(-5).makeNoise('hooonk')
+bus.pickUpNDropOve(5).makeNoise().pickUpNDropOve(-5).makeNoise('hooonk').pickUpNDropOve(-50)
