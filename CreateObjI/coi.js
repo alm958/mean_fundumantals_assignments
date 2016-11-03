@@ -39,9 +39,9 @@ bus.pickUpNDropOve = function(passengerDelta){
     if (passengerDelta < 0){
         direction = 'off';
     }
-    console.log(`${passengerDelta} passengers just got ${direction} the bus.`);
+    console.log(`${Math.abs(passengerDelta)} passengers just got ${direction} the bus.`);
     console.log(`The new passenger count is ${bus.passenger_count}.`);
     return bus;
 }
 
-bus.pickUpNDropOve(5).makeNoise().pickUpNDropOve(-5).makeNoise('hooonk').pickUpNDropOve(-50)
+bus.pickUpNDropOve(5).makeNoise().pickUpNDropOve(-5).makeNoise('hooonk').pickUpNDropOve(-50).pickUpNDropOve(-50)
