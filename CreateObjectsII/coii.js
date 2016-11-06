@@ -66,3 +66,7 @@ bus.move().checkMiles();
 bike.move().checkMiles();
 
 sedan.move().checkMiles();
+
+console.log(sedan);
+console.log(bus);
+console.log(bike);
